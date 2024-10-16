@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= page.title %></title>
+    <link rel="stylesheet" href="/css/Main.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img class="logo" src="/img/img_logo_referências/Minecraft-Logo.png" alt="logo">
+            <ol class="menu">
+                <% page.content.header.menu.forEach(item => { %>
+                    <li><a href="<%= item.link %>"><%= item.text %></a></li>
+                <% }); %>
+            </ol>
+        </div>
+    </header>
+
+    <section class="slider">
+        <% page.content.sliderImages.forEach(img => { %>
+            <img src="<%= img.src %>" alt="<%= img.alt %>">
+        <% }); %>
+    </section>
+
+    <nav>
+        <h3><%= page.content.nav.sectionTitle %></h3>
+        <ul>
+            <% page.content.nav.links.forEach(link => { %>
+                <li><%= link %></li>
+            <% }); %>
+        </ul>
+    </nav>
+
+    <article>
+        <h2><%= page.content.article.title %></h2>
+        <% page.content.article.content.forEach(item => { %>
+            <div>
+                <img src="<%= item.imgSrc %>" alt="">
+                <p><%= item.text %></p>
+            </div>
+        <% }); %>
+    </article>
+
+    <section class="videos">
+        <h2>Veja também:</h2>
+        <% page.content.videoSlider.forEach(video => { %>
+            <iframe src="<%= video.src %>" title="<%= video.title %>"></iframe>
+        <% }); %>
+    </section>
+
+    <footer>
+        <p><%= page.content.footer.copyright %></p>
+        <p><%= page.content.footer.question %></p>
+    </footer>
+</body>
+</html>
