@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= page.title %></title>
     <link rel="stylesheet" href="/css/Main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
-    <header>
-        <div class="header-container">
+    <div class="grid-conteiner">
+        <header>
+            <div class="header-conteiner">
             <img class="logo" src="/img/img_logo_referências/Minecraft-Logo.png" alt="logo">
             <ol class="menu">
                 <% page.content.header.menu.forEach(item => { %>
@@ -16,43 +18,53 @@
                 <% }); %>
             </ol>
         </div>
-    </header>
+        </header>
+        
+        <section class="slideimg">
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <% page.content.sliderImages.forEach(img => { %>
+                        <img src="<%= img.src %>" alt="<%= img.alt %>">
+                    <% }); %>
+                </div>
+                <div class="slider-nav">
+                    <% page.content.sliderImages.forEach((img, index) => { %>
+                        <a href="#slide-<%= index + 1 %>"></a>
+                    <% }); %>
+                </div>
+            </div>
+        </section>
 
-    <section class="slider">
-        <% page.content.sliderImages.forEach(img => { %>
-            <img src="<%= img.src %>" alt="<%= img.alt %>">
-        <% }); %>
-    </section>
-
-    <nav>
-        <h3><%= page.content.nav.sectionTitle %></h3>
-        <ul>
+        <nav>
+            <p><%= page.content.nav.sectionTitle %></p>
             <% page.content.nav.links.forEach(link => { %>
                 <li><%= link %></li>
             <% }); %>
-        </ul>
-    </nav>
+        </nav>
 
-    <article>
-        <h2><%= page.content.article.title %></h2>
-        <% page.content.article.content.forEach(item => { %>
-            <div>
-                <img src="<%= item.imgSrc %>" alt="">
-                <p><%= item.text %></p>
+        <article>
+            <h2><%= page.content.article.title %></h2>
+            <ol>
+                <% page.content.article.content.forEach(item => { %>
+                    <li><img src="<%= item.imgSrc %>" alt=""></li>
+                    <li><p><%= item.text %></p></li>
+                <% }); %>
+            </ol>
+        </article>
+
+        <section class="slidevid">
+            <h2>Veja também:</h2>
+            <div class="slider-wrapper">
+                <% page.content.videoSlider.forEach(video => { %>
+                    <iframe width="560" height="315" src="<%= video.src %>" title="<%= video.title %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <% }); %>
             </div>
-        <% }); %>
-    </article>
+        </section>
 
-    <section class="videos">
-        <h2>Veja também:</h2>
-        <% page.content.videoSlider.forEach(video => { %>
-            <iframe src="<%= video.src %>" title="<%= video.title %>"></iframe>
-        <% }); %>
-    </section>
-
-    <footer>
-        <p><%= page.content.footer.copyright %></p>
-        <p><%= page.content.footer.question %></p>
-    </footer>
+        <footer>
+            <p><%= page.content.footer.copyright %></p>
+            <p><%= page.content.footer.question %></p>
+        </footer>
+    </div>
 </body>
 </html>

@@ -5,12 +5,14 @@ const port = 3000;
 
 // Configurar o motor de visualização EJS
 app.set('view engine', 'ejs');
+
+// Servir arquivos estáticos da pasta 'public'
 app.use(express.static('public'));
 
+// Conectar ao MongoDB
 mongoose.connect('mongodb://localhost:27017/website_dynamic')
   .then(() => console.log('Conectado ao MongoDB'))
   .catch(err => console.error('Erro ao conectar ao MongoDB', err));
-
 
 // Definir o schema e modelo da página
 const pageSchema = new mongoose.Schema({
