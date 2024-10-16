@@ -55,16 +55,22 @@
         <section class="slidevid">
             <h2>Veja também:</h2>
             <div class="slider-wrapper">
-                <% page.content.videoSlider.forEach(video => { %>
-                    <iframe width="560" height="315" src="<%= video.src %>" title="<%= video.title %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <% }); %>
+                <div class="slider">
+                    <% page.content.videoSlider.forEach((video, index) => { %>
+                        <div id="slide-<%= index + 1 %>" class="slide">
+                            <iframe width="560" height="315" src="<%= video.src %>" title="<%= video.title %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    <% }); %>
+                </div>
+                <div class="slider-nav">
+                    <% page.content.videoSlider.forEach((video, index) => { %>
+                        <a href="#slide-<%= index + 1 %>"></a>
+                    <% }); %>
+                </div>
             </div>
         </section>
-
+        
         <footer>
             <p><%= page.content.footer.copyright %></p>
             <p><%= page.content.footer.question %></p>
         </footer>
-    </div>
-</body>
-</html>
