@@ -9,10 +9,10 @@ app.set('view engine', 'ejs');
 // Servir arquivos estáticos da pasta 'public'
 app.use(express.static('public'));
 
-// Conectar ao MongoDB
-mongoose.connect('mongodb://localhost:27017/website_dynamic')
-  .then(() => console.log('Conectado ao MongoDB'))
-  .catch(err => console.error('Erro ao conectar ao MongoDB', err));
+// Conectar ao MongoDB Atlas
+mongoose.connect('mongodb+srv://miguel_adm:202655@cluster0.vxchf.mongodb.net/website_dynamic?retryWrites=true&w=majority')
+  .then(() => console.log('Conectado ao MongoDB Atlas'))
+  .catch(err => console.error('Erro ao conectar ao MongoDB Atlas', err));
 
 // Definir o schema e modelo da página
 const pageSchema = new mongoose.Schema({
