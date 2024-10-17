@@ -14,39 +14,8 @@ mongoose.connect('mongodb+srv://miguel_adm:202655@cluster0.vxchf.mongodb.net/web
   .then(() => console.log('Conectado ao MongoDB Atlas'))
   .catch(err => console.error('Erro ao conectar ao MongoDB Atlas', err));
 
-// Definir o schema e modelo da página
-const pageSchema = new mongoose.Schema({
-  title: String,
-  slug: String,
-  content: {
-    header: {
-      logo: String,
-      menu: [{ text: String, link: String }]
-    },
-    sliderImages: [{ src: String, alt: String }],
-    nav: {
-      sectionTitle: String,
-      links: [String]
-    },
-    article: {
-      title: String,
-      content: [{ imgSrc: String, text: String }]
-    },
-    videoSlider: [{ src: String, title: String }],
-    footer: {
-      copyright: String,
-      question: String
-    }
-  },
-  metadata: {
-    author: String,
-    createdAt: Date,
-    updatedAt: Date
-  },
-  isActive: Boolean
-});
-
-const Page = mongoose.model('Page', pageSchema);
+// Importar o modelo Page
+const Page = require('./models/pageModel.js');
 
 // Rota para a página inicial (slug: pagina-inicial)
 app.get('/', async (req, res) => {
