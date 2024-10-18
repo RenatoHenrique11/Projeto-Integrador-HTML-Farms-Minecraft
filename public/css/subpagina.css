@@ -197,64 +197,90 @@
         object-fit: cover; /* Garante que as imagens não sejam esticadas */
     }
 
+
+
+    /**/
+
     .sidebar {
         grid-column: 3;
         align-self: start;
         padding: 15px;
         background-color: #f9f9f9;
-        border-radius: 15px;
+        border-radius: 5px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         text-align: start;
         border-left: 5px solid black;
     }
-    
+
     .sidebar h2 {
         margin-top: 0;
         color: #252525;
         text-align: center;
     }
-    
+
+    /* Notícia Relacionada */
     .noticia-relacionada {
         margin-bottom: 20px; /* Espaçamento entre as notícias */
-        text-align: center; /* Centraliza título e imagem */
     }
-    
-    .noticia-relacionada h3 {
-        font-size: 1em; /* Tamanho adequado para o subtítulo */
-        margin-bottom: 10px;
-        color: #252525; /* Cor do texto */
+
+    /* Conteúdo da notícia */
+    .noticia-conteudo {
+        display: flex; /* Coloca a imagem e o texto lado a lado */
+        align-items: center; /* Alinha verticalmente no centro */
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: none;
+        padding: 10px;
+        transition: transform 0.3s ease; /* Animação para o efeito de hover */
     }
-    
-    .noticia-relacionada img {
-        width: 100%; /* A imagem ocupa toda a largura do container */
-        height: auto; /* Mantém a proporção da imagem */
-        max-width: 200px; /* Limite de largura para não exceder um tamanho adequado */
-        border-radius: 10px; /* Bordas arredondadas para um visual agradável */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar destaque */
-        margin: 0 auto; /* Centraliza a imagem */
+    .noticia-conteudo img{
+        box-shadow: 0 2px 3px black;
     }
-    
-    
-    .sidebar ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+
+    .noticia-conteudo:hover {
+        transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
     }
-    
-    .sidebar ul li {
-        margin: 10px 0;
+
+    /* Imagem da notícia */
+    .noticia-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+        object-fit: cover;
+        margin-right: 15px; /* Espaçamento entre a imagem e o texto */
     }
-    
-    .sidebar ul li a {
-        text-decoration: none;
-        color: #000;
+
+    /* Texto da notícia */
+    .noticia-texto {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .noticia-texto .categoria {
+        font-size: 0.8em;
         font-weight: bold;
+        color: #ffdc00; /* Cor roxa para a categoria */
+        margin-bottom: 5px;
+    }
+
+    .noticia-texto h3 {
+        font-size: 1em; /* Tamanho do título da notícia */
+        margin: 5px 0;
+        color: #252525; /* Cor do texto */
         transition: color 0.3s;
     }
-    
-    .sidebar ul li a:hover {
-        color: #ff1e4f;
+
+    .noticia-texto h3:hover {
+        color: #ff1e4f; /* Cor ao passar o mouse */
     }
+
+    .noticia-texto p {
+        font-size: 0.9em;
+        color: #777; /* Cor mais clara para o autor */
+        margin: 0;
+    }
+    /**/
 
     ol,li{
         display: inline-block;
