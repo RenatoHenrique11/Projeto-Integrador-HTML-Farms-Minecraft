@@ -192,6 +192,7 @@
 
         ol{
             list-style: none; /* Remove as bolinhas do <ul> */
+            border-top: 4px ridge rgba(0, 0, 0, 0.1);
         }
         
     }
