@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const port = 3000;
+require('dotenv').config();
+
 
 // Configurar o motor de visualização EJS
 app.set('view engine', 'ejs');
@@ -10,9 +12,10 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 // Conectar ao MongoDB Atlas
-mongoose.connect('mongodb+srv://miguel_adm:202655@cluster0.vxchf.mongodb.net/website_dynamic?retryWrites=true&w=majority')
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('Conectado ao MongoDB Atlas'))
   .catch(err => console.error('Erro ao conectar ao MongoDB Atlas', err));
+
 
 // Importar as rotas da página
 const pageRoutes = require('./routes/pageRoutes');
