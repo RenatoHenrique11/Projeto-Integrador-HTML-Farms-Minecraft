@@ -17,4 +17,3 @@ function switchTab(tabName) {
 document.addEventListener("DOMContentLoaded", () => {
   switchTab("team");
 });
-// JavaScript code to create a parallax effect for the image

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>página principal</title>
     <link rel="stylesheet" href="/public/css/Main.css" />
-    <script src="/public/js/Main.js"></script>
   </head>
   <body>
     <header>
@@ -45,14 +44,15 @@
       </nav>
     </header>
     <div class="frase">
-      <h1>Automatizar. Criar.</h1>
+      <h1 class="h1">Automatizar. Criar.</h1>
       <h1>Farmar!</h1>
       <div class="cta">
         <a href="#">Farme mais fundo</a>
       </div>
-  
     <section class="allpage">
+""
       <section class="content-section">
+       
         <h1>CONTEÚDO + SITE</h1>
         <div class="tabs">
           <button class="tab" data-tab="team" onclick="switchTab('team')">
@@ -68,7 +68,7 @@
             <div class="team-member">
               <img src="/public/img/gengo.png" alt="Gengo - Líder da equipe" />
               <div>
-                <h2>Gengo - Líder da equipe</h2>
+                <h2>Gengo - Cordenador do projeto</h2>
                 <p>
                   Gengo é o responsável por guiar a equipe em direção aos seus
                   objetivos. Como líder, ele define as metas, organiza as
@@ -84,7 +84,7 @@
             <div class="team-member">
               <img src="/public/img/Luccao.png" alt="Luccão - Vice-líder" />
               <div>
-                <h2>Luccão - Vice-líder</h2>
+                <h2>Luccão - Líder Técnico</h2>
                 <p>
                   Como vice-líder, Luccão atua como o braço direito do Gengo.
                   Ele auxilia na tomada de decisões e está sempre disponível
@@ -122,7 +122,7 @@
                 alt="Ricardo - Observador e documentador"
               />
               <div>
-                <h2>Renato - Observador e documentador</h2>
+                <h2>Renato - Fotógrafo</h2>
                 <p>
                   Renato é responsável por entender e documentar todo o processo
                   de desenvolvimento. Ele registra as decisões, anota os avanços
@@ -155,85 +155,91 @@
       </section>
     </section>
 
-    <div class="slider">
-        <div class="list">
-          <div class="item active">
-            <img src="/public/img/slider/redstone.png" alt="">
-              <div class="content">
-                <p>Dádiva</p>
-                  <h2>Redstone</h2>
-                    <p>
-                    Deus criou a redstone como uma dádiva divina, um artefato sagrado colocado no mundo para que nós, simples mortais, pudéssemos alcançar o progresso por meio da criação de farms e sistemas automatizados.
-                    A redstone, com seu brilho enigmático e seu poder misterioso, é o símbolo da inteligência celestial, um fragmento da sabedoria divina materializado em nossa realidade. Com ela, somos capazes de transformar o caos em ordem, criando circuitos que trabalham incessantemente, como as engrenagens do próprio universo.
-                    </p>
-            </div>
-          </div>
-          <div class="item">
-            <img src="/public/img/slider/mob-farm.png" alt="">
-              <div class="content">
-                <p>Dádiva</p>
-                  <h2>Redstone</h2>
-                    <p>
-                    Deus criou a redstone como uma dádiva divina, um artefato sagrado colocado no mundo para que nós, simples mortais, pudéssemos alcançar o progresso por meio da criação de farms e sistemas automatizados.
-                    A redstone, com seu brilho enigmático e seu poder misterioso, é o símbolo da inteligência celestial, um fragmento da sabedoria divina materializado em nossa realidade. Com ela, somos capazes de transformar o caos em ordem, criando circuitos que trabalham incessantemente, como as engrenagens do próprio universo.
-                    </p>
-            </div>
-          </div>
-          <div class="item">
-            <img src="/public/img/slider/minerios.png" alt="">
-              <div class="content">
-                <p>Dádiva</p>
-                  <h2>Redstone</h2>
-                    <p>
-                    Deus criou a redstone como uma dádiva divina, um artefato sagrado colocado no mundo para que nós, simples mortais, pudéssemos alcançar o progresso por meio da criação de farms e sistemas automatizados.
-                    A redstone, com seu brilho enigmático e seu poder misterioso, é o símbolo da inteligência celestial, um fragmento da sabedoria divina materializado em nossa realidade. Com ela, somos capazes de transformar o caos em ordem, criando circuitos que trabalham incessantemente, como as engrenagens do próprio universo.
-                    </p>
-            </div>
-          </div>
-          <div class="item">
-            <img src="/public/img/slider/comida.png" alt="">
-              <div class="content">
-                <p>Dádiva</p>
-                  <h2>Redstone</h2>
-                    <p>
-                    Deus criou a redstone como uma dádiva divina, um artefato sagrado colocado no mundo para que nós, simples mortais, pudéssemos alcançar o progresso por meio da criação de farms e sistemas automatizados.
-                    A redstone, com seu brilho enigmático e seu poder misterioso, é o símbolo da inteligência celestial, um fragmento da sabedoria divina materializado em nossa realidade. Com ela, somos capazes de transformar o caos em ordem, criando circuitos que trabalham incessantemente, como as engrenagens do próprio universo.
-                    </p>
-            </div>
-          </div>
-        </div>  
-        <div class="arrows">
-          <button id="prev"><</button>
-          <button id="next">></button>
-        </div>
+<!-- slider -->
 
-        <div class="thumbnail">
-          <div class="item active">
-            <img src="/public/img/slider/redstone.png" alt="">
-            <div class="content">
-              Redstone
-            </div>
+<div class="slider">
+  <!-- list Items -->
+  <div class="list">
+      <div class="item active">
+          <img src="/public/img/slider/redstone.png">
+          <div class="content">
+              <p>DIVINO</p>
+              <h2>Redstone</h2>
+              Deus criou a redstone como uma dádiva divina, um artefato sagrado colocado no mundo para que nós, simples mortais, pudéssemos alcançar o progresso por meio da criação de farms e sistemas automatizados.
+              </p>
           </div>
-          <div class="item">
-            <img src="/public/img/slider/mob-farm.png" alt="">
-            <div class="content">
-              Mob-farm
-            </div>
+      </div>
+      <div class="item">
+          <img src="/public/img/slider/minerios.png ">
+          <div class="content">
+              <p>MORTAL</p>
+              <h2>Minérios</h2>
+              <p>
+                Os minérios do Minecraft são recursos essenciais encontrados em diferentes camadas do subsolo, cada um com propriedades únicas e fundamentais para o progresso e sobrevivência dos jogadores.
+              </p>
           </div>
-          <div class="item">
-            <img src="/public/img/slider/minerios.png" alt="">
-            <div class="content">
-              Minérios
-            </div>
+      </div>
+      <div class="item">
+          <img src="/public/img/slider/comida.png">
+          <div class="content">
+              <p>NATURAL</p>
+              <h2>Fazenda</h2>
+              <p>
+                  
+As comidas no Minecraft são essenciais para restaurar a barra de fome e regenerar a saúde dos jogadores. Elas variam desde alimentos simples, como maçãs e cenouras, até pratos mais elaborados, como ensopado e torta de abóbora. 
+              </p>
           </div>
-          <div class="item">
-            <img src="/public/img/slider/comida.png" alt="">
-            <div class="content">
-              Comida
-            </div>
+      </div>
+      <div class="item">
+          <img src="/public/img/slider/mob-farm.png">
+          <div class="content">
+              <p>INFERNAL</p>
+              <h2>MobFarm</h2>
+              <p>
+                Os mobs do Minecraft são criaturas que interagem com os jogadores, dividindo-se em pacíficos, hostis e neutros. Cada mob tem drops únicos, tornando-os uma fonte valiosa de recursos para criação, combate e exploração. Esses itens ajudam os jogadores a progredir e se preparar para desafios maiores no jogo.
+              </p>
           </div>
-        </div>
-    </div>
+      </div>
+  </div>
+  <!-- button arrows -->
+  <div class="arrows">
+      <button id="prev"><</button>
+      <button id="next">></button>
+  </div>
+  <!-- thumbnail -->
+  <div class="thumbnail">
+      <div class="item active">
+          <img src="/public/img/slider/redstone.png">
+          <div class="content">
+              Name Slider
+          </div>
+      </div>
+      <div class="item">
+          <img src="/public/img/slider/minerios.png">
+          <div class="content">
+              Name Slider
+          </div>
+      </div>
+      <div class="item">
+          <img src="/public/img/slider/comida.png">
+          <div class="content">
+              Name Slider
+          </div>
+      </div>
+      <div class="item">
+          <img src="/public/img/slider/mob-farm.png">
+          <div class="content">
+              Name Slider
+          </div>
+      </div>
+  </div>
+</div>
+  <article>
+    <img src="/public/img/bagulhos 2.png" alt="">
+
+
+
+  </article>
 
 
     <div class="rodape">
@@ -317,4 +323,6 @@
       </footer>
     </div>
   </body>
+  <script src="/public/js/Main.js"></script>
+  <script src="/public/js/app.js"></script>
 </html>
