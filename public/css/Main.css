@@ -367,11 +367,23 @@ header {
 
 article {
   background-color: whitesmoke;
+  padding-bottom: 40px;
 }
 
 article img {
   width: 2500px;
   height: auto;
+}
+article h2 {
+  font-size: 120px;
+  text-shadow: 4px 2px 0 rgba(255, 255, 255, 0.8);
+  padding: 0%;
+  margin: 0%;
+}
+
+article p {
+  font-size: 16px;
+  margin: 80px;
 }
 
 .rodape {

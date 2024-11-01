@@ -1,9 +1,21 @@
-function switchTab(tabId) {
-  // Esconde todas as abas
-  document.querySelectorAll(".tab-content").forEach((tab) => {
-    tab.classList.remove("active");
-  });
+let currentIndex = 0;
+const items = document.querySelectorAll(".carousel-item");
 
-  // Exibe a aba clicada
-  document.getElementById(tabId).classList.add("active");
+function showSlide(index) {
+  items.forEach((item, i) => {
+    item.style.display = i === index ? "block" : "none";
+  });
 }
+
+function moveSlide(direction) {
+  currentIndex += direction;
+  if (currentIndex < 0) {
+    currentIndex = items.length - 1;
+  } else if (currentIndex >= items.length) {
+    currentIndex = 0;
+  }
+  showSlide(currentIndex);
+}
+
+// Initialize the carousel
+showSlide(currentIndex);
