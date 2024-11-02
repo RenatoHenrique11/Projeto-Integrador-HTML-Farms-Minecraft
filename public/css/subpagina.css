@@ -1,0 +1,378 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: #252525;
+}
+.grid-conteiner {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  column-gap: 32px; /* Changed from 30px */
+  padding: 96px 32px; /* Added consistent padding */
+  width: calc(100% - 32px); /* Adjusted width to account for padding */
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+header {
+  grid-column: span 3;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-align: center;
+}
+
+.menu-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 1px 3px black;
+  padding: 8px 16px; /* Adjusted to multiples of 8 */
+  transition: background-color 0.3s;
+}
+
+.menu-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 16px; /* Adjusted padding */
+}
+
+.logo-container {
+  padding-top: 8px; /* Adjusted to be a multiple of 8 */
+  margin-left: 192px; /* Adjusted margin */
+  margin-right: 192px; /* Adjusted margin */
+}
+
+.logo {
+  height: 50px; /* Ajuste o tamanho da logo */
+  box-shadow: none;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-list li {
+  position: relative;
+  margin-left: 16px; /* Adjusted to multiple of 8 */
+}
+
+.menu-list a:hover {
+  background-color: #444;
+  border-radius: 8px; /* Adjusted to a multiple of 8 */
+}
+.dropdown {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #252525;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px; /* Adjusted */
+  top: 100%;
+  left: 0;
+  padding: 8px 0; /* Adjusted padding */
+}
+
+.dropdown-content a {
+  color: #f3e4e4; /* Texto amarelo */
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ff1e4f; /* Cor ao passar o mouse sobre as opções */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Exibe o menu suspenso ao passar o mouse */
+}
+
+/*parte principal do site*/
+.principal {
+  grid-column: 2;
+  column-gap: 16px; /* Adjusted to multiple of 8 */
+  text-align: center;
+  color: #fff;
+}
+
+.noticia {
+  grid-column: 1 / span 3;
+  max-width: 800px;
+  margin: 64px auto 16px auto; /* Added margin-top to create space from the header */
+  background-color: #ff1e4f;
+  color: #fff;
+  padding: 96px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.img-container {
+  background-color: #ffdc00;
+  padding: 8px;
+  border-radius: 8px; /* Adjusted */
+  overflow: hidden;
+  max-width: 100%;
+  display: flex;
+  margin: 16px; /* Adjusted */
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 100%; /* Ocupar 100% da largura disponível */
+  height: auto; /* Ajustar altura proporcionalmente */
+  max-height: 200%;
+  border-radius: 15px;
+  object-fit: contain; /* Garante que a imagem se encaixe sem cortar */
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 10px 10px black;
+}
+
+.categoria {
+  background-color: #000;
+  color: #ffdc00; /* Texto amarelo */
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+h1 {
+  margin-top: 10px;
+}
+
+.autor-data {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  color: #ffdc00;
+}
+
+.autor-data strong {
+  color: #fff;
+}
+
+.redacao iframe {
+  align-self: center;
+  margin: 20px;
+  padding: 10px;
+  display: block; /* Torna o elemento um bloco completo, centralizando melhor */
+  margin: 20px auto; /* Centraliza horizontalmente */
+  max-width: 90%; /* Limita a largura para não ocupar toda a tela */
+  width: 560px; /* Define uma largura fixa para iframe e imagens */
+  height: 315px; /* Define a altura fixa para combinar com a largura */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para destaque */
+  object-fit: cover; /* Garante que as imagens não sejam esticadas */
+}
+
+.redacao {
+  text-align: start;
+
+  ol {
+    list-style: none; /* Remove as bolinhas do <ul> */
+    border-top: 4px ridge rgba(0, 0, 0, 0.1);
+  }
+}
+
+.article-img {
+  display: block; /* Torna o elemento um bloco completo, centralizando melhor */
+  margin: 20px auto; /* Centraliza horizontalmente */
+  max-width: 90%; /* Limita a largura para não ocupar toda a tela */
+  width: 560px; /* Define uma largura fixa para iframe e imagens */
+  height: 315px; /* Define a altura fixa para combinar com a largura */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 4px 8px 0 rgba(0, 0, 0, 0.8); /* Adiciona uma sombra para destaque */
+  object-fit: cover; /* Garante que as imagens não sejam esticadas */
+}
+
+.sidebar {
+  grid-column: 3;
+  align-self: start;
+  padding: 16px; /* Adjusted padding */
+  border-radius: 1px; /* Adjusted */
+  box-shadow: none;
+  text-align: start;
+  border-left: 4px solid rgba(0, 0, 0, 0.7); /* Adjusted border width */
+  position: sticky;
+  top: 160px; /* Adjusted to a multiple of 8 */
+  padding: 32px 16px; /* Consistent padding */
+
+  h2 {
+    margin-top: 0;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+/* Notícia Relacionada */
+.noticia-relacionada {
+  margin-bottom: 20px; /* Espaçamento entre as notícias */
+}
+
+/* Conteúdo da notícia */
+.noticia-conteudo {
+  display: flex; /* Coloca a imagem e o texto lado a lado */
+  align-items: center; /* Alinha verticalmente no centro */
+  border-radius: 10px;
+  box-shadow: none;
+  padding: 10px;
+  transition: transform 0.3s ease; /* Animação para o efeito de hover */
+  img {
+    box-shadow: 0 2px 3px black;
+  }
+}
+
+.noticia-conteudo:hover {
+  transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+}
+
+/* Imagem da notícia */
+.noticia-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 15px; /* Espaçamento entre a imagem e o texto */
+}
+
+/* Texto da notícia */
+.noticia-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .categoria {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #ffdc00; /* Cor roxa para a categoria */
+    margin-bottom: 5px;
+  }
+  h3 {
+    font-size: 1em; /* Tamanho do título da notícia */
+    margin: 5px 0;
+    color: #fff; /* Cor do texto */
+    transition: color 0.3s;
+  }
+  h3:hover {
+    color: #ff1e4f; /* Cor ao passar o mouse */
+  }
+  p {
+    font-size: 0.9em;
+    color: #777; /* Cor mais clara para o autor */
+    margin: 0;
+  }
+}
+
+.rodape {
+  background: url("/public/img/img_logo_referências/footer.png");
+}
+
+.footer-container {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 40px 16px; /* Adjusted padding */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1184px; /* Adjusted to multiple of 8 */
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 48px 16px;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 192px; /* Adjusted to multiple of 8 */
+  margin-bottom: 16px; /* Adjusted */
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 8px; /* Adjusted to multiple of 8 */
+    display: block;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+}
+
+.footer-section ul li a:hover {
+  color: #ffdc00; /* Cor amarela ao passar o mouse */
+}
+
+.footer-section.newsletter {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ffdc00;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+  }
+  button {
+    padding: 10px;
+    background-color: #ff1e4f;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+}
+
+.footer-section.newsletter button:hover {
+  background-color: #ffdc00; /* Cor ao passar o mouse */
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 8px solid #383838; /* Adjusted border */
+  padding-top: 16px; /* Adjusted */
+  margin-top: 16px; /* Adjusted */
+
+  p {
+    margin: 8px 0; /* Adjusted */
+  }
+
+  a {
+    color: #ffdc00;
+    text-decoration: none;
+  }
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
