@@ -1,38 +1,55 @@
 const mongoose = require('mongoose');
 
-// Definir o schema e modelo da página
-const pageSchema = new mongoose.Schema({
-  title: String,
-  slug: String,
-  content: {
-    header: {
-      logo: String,
-      menu: [{ text: String, link: String }]
-    },
-    sliderImages: [{ src: String, alt: String }],
-    nav: {
-      sectionTitle: String,
-      links: [String]
-    },
-    article: {
-      title: String,
-      content: [{ imgSrc: String, text: String }]
-    },
-    videoSlider: [{ src: String, title: String }],
-    footer: {
-      copyright: String,
-      question: String
-    }
-  },
-  metadata: {
-    author: String,
-    createdAt: { type: Date, default: Date.now },
-    updatedAt: Date
-  },
-  isActive: { type: Boolean, default: true }
+const contentSchema = new mongoose.Schema({
+  type: { type: String, required: true },
+  level: { type: Number },
+  text: { type: String },
+  src: { type: String },
+  alt: { type: String },
+  items: [String]
 });
 
-// Criar o modelo da página
+const relatedArticleSchema = new mongoose.Schema({
+  title: String,
+  author: String,
+  category: String,
+  image: String,
+  link: String
+});
+
+const footerLinkSchema = new mongoose.Schema({
+  text: String,
+  link: String
+});
+
+const pageSchema = new mongoose.Schema({
+  title: { type: String, required: true },
+  category: String,
+  author: String,
+  date: String,
+  summary: String,
+  mainImage: String,
+  content: [contentSchema],
+  relatedArticles: [relatedArticleSchema],
+  footer: {
+    institucional: [footerLinkSchema],
+    canaisDosEngenheiros: [footerLinkSchema],
+    conhecaOGrupo: [footerLinkSchema],
+    newsletter: {
+      title: String,
+      placeholder: String,
+      buttonText: String
+    }
+  },
+  footerBottom: {
+    text: String,
+    developedBy: {
+      text: String,
+      link: String
+    }
+  }
+});
+
 const Page = mongoose.model('Page', pageSchema);
 
 module.exports = Page;
