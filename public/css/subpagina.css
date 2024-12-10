@@ -136,13 +136,16 @@ header {
 }
 
 img {
-   /* Ocupar 100% da largura disponível */
+  width: 50%; /* Ocupar 100% da largura disponível */
   height: auto; /* Ajustar altura proporcionalmente */
   max-height: 100%;
   border-radius: 15px;
   object-fit: contain; /* Garante que a imagem se encaixe sem cortar */
   margin-bottom: 20px;
   box-shadow: 1px 1px 10px 10px black;
+  display: flex;
+  justify-content: center;
+      align-items: center;
 }
 
 .categoria {
