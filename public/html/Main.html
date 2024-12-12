@@ -41,6 +41,7 @@
           </li>
         </ul>
       </nav>
+      
     </header>
     <div class="frase">
       <h1 class="h1">Automatizar. Criar.</h1>
@@ -222,6 +223,39 @@ As comidas no Minecraft são essenciais para restaurar a barra de fome e regener
     <img src="/public/img/bagulhos 2.png" alt="">
     <h2>Minefarms</h2>
    <p>Atualização mais recentes do Minecraft:</p>
+   
+   <header style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background-color: #282c34; color: white;">
+
+  <button id="musicButton" style="padding: 10px 20px; font-size: 16px; color: white; background-color: #0078d4; border: none; border-radius: 5px; cursor: pointer;">
+    Tocar Música
+  </button>
+</header>
+
+<audio id="minecraftTheme" loop>
+  <source src="public/audio/minecraft-song-126368.mp3" type="audio/mp3">
+  Seu navegador não suporta o elemento de áudio.
+</audio>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const musicButton = document.getElementById("musicButton");
+    const minecraftTheme = document.getElementById("minecraftTheme");
+
+    let isPlaying = false;
+
+    musicButton.addEventListener("click", () => {
+      if (isPlaying) {
+        minecraftTheme.pause();
+        musicButton.textContent = "Tocar Música";
+      } else {
+        minecraftTheme.play();
+        musicButton.textContent = "Pausar Música";
+      }
+      isPlaying = !isPlaying;
+    });
+  });
+</script>
+
   </article>
 
 </main>
