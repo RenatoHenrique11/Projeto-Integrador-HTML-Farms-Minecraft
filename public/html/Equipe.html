@@ -4,73 +4,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>equipe</title>
-    <link rel="stylesheet" href="/public/css/Equipe.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="/public/css/subpagina.css">
 <script>hljs.highlightAll();</script>
+<style>
+  .imagem-reduzida {
+    width: 200px;  /* Define a largura desejada */
+    height: auto;  /* Mantém a proporção da imagem */
+  }
+ 
+  .container {
+   display: flex;
+   justify-content: center; /* Centraliza as imagens horizontalmente */
+   gap: 20px; /* Espaçamento entre as imagens */
+}
+  .container img {
+   width: 300px; /* Define a largura das imagens */
+   height: auto; /* Mantém a proporção das imagens */
+   border: 2px solid #0078d4; /* Borda opcional para visualização */
+}
+      
+</style>
 
 </head>
 <body>
-    <div id="team" class="tab-content">
-        <div class="team-container">
-          <div class="team-member">
-            <img src="/public/img/renato.png" alt="Renato - Líder da equipe" />
-            <div>
-              <h2>Renato - Cordenador do projeto</h2>
-              <p>
-                Renato é o responsável por guiar a equipe em direção aos seus
-                objetivos. Como líder, ele define as metas, organiza as
-                tarefas e toma as principais decisões estratégicas. Com uma
-                visão ampla do projeto e uma habilidade natural para resolver
-                problemas, ele garante que todas as etapas estejam alinhadas e
-                que os prazos sejam cumpridos. Seu papel é fundamental para
-                manter a equipe unida e produtiva.
-              </p>
-            </div>
-          </div>
-
-          <div class="team-member">
-            
-            <div>
-              <h2>Meninas (Bruna Longuim, Gabi Sichirioli, Larissa Monteiro e Sabrina Ribeiro) - Apoio Moral</h2>
-              <p>
-                Como grupo de Apoio Moral, as meninas foram encarregadas de dar suporte durante na criação
-                do projeto ao decorrer dos últimos meses, gerando ideias e opiniões no trabalho.
-              </p>
-            </div>
-          </div>
-
-          <div class="team-member">
-            
-            <div>
-              <h2>Giovanni Bonazzi - Pesquisa</h2>
-              <p>
-                Giovanni Bonazzi foi uma contratação realizada no meio do trabalho.
-                Sua função é realizar pesquisas sobre os assuntos que serão abordados na realização do trabalho
-                e ajudar a manter a equipe motivada e engajada. Além disso, Johl é responsável
-              </p>
-            </div>
-          </div>
-
-          <div class="team-member">
-            <img
-              src="/public/img/renato.png"
-              alt="Ricardo - Observador e documentador"
-            />
-            <div>
-              <h2>Renato - Fotógrafo</h2>
-              <p>
-                Renato é responsável por entender e documentar todo o processo
-                de desenvolvimento. Ele registra as decisões, anota os avanços
-                e acompanha o que está acontecendo no projeto, garantindo que
-                todo o processo seja transparente e bem compreendido. Além
-                disso, ele também atua como um ponto de referência para os
-                membros da equipe ao lembrar de ajustes realizados ou questões
-                que precisam ser consideradas para conquistas futuras.
-              </p>
-            </div>
-          </div>
-        </div>
+  <header>
+    <nav class="menu-header">
+      <div class="logo-container">
+        <a href="Main.html"><img class="logo" src="/public/img/img_logo_referências/logo.png" alt="logo"></a> 
       </div>
+      <ul class="menu-list">
+        
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Minérios ▼</a>
+          <div class="dropdown-content">
+            <a href="Ferro.html">Ferro</a>
+            <a href="Ouro.html">Ouro</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Comida ▼</a>
+          <div class="dropdown-content">
+            <a href="Porco.html">Carne de Porco</a>
+            <a href="Batata.html">Batata & Sementes</a>
+            <a href="Melancia&Abobora.html">Melância & Abóbora</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Mob-Farms ▼</a>
+          <div class="dropdown-content">
+            <a href="Overworld.html">Overword</a>
+            <a href="Slime.html">Slime</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Nether ▼</a>
+          <div class="dropdown-content">
+            <a href="Blaze.html">Blaze</a>
+            <a href="Ghast.html">Ghast</a>
+            <a href="WhiterSkeleton.html">Wither Skeleton</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">The End ▼</a>
+          <div class="dropdown-content">
+            <a href="Enderman.html">Enderman</a>
+            <a href="Shulker.html">Shulker</a>
+            <a href="EnderDragon.html">Ender Dragon</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <article class="principal">
+      <class class="redacao">
+
+        <div class="container">
+          <img src="/public/img/renato.png" alt="Imagem Renato"  class="imagem-reduzida"><br>
+      </div>
+            <div class="team-member">
+                <div>
+                  <h2>Renato - Cordenador do projeto</h2>
+                  <p>
+                    Renato é o responsável por guiar a equipe em direção aos seus
+                    objetivos. Como líder, ele define as metas, organiza as
+                    tarefas e toma as principais decisões estratégicas. Com uma
+                    visão ampla do projeto e uma habilidade natural para resolver
+                    problemas, ele garante que todas as etapas estejam alinhadas e
+                    que os prazos sejam cumpridos. Seu papel é fundamental para
+                    manter a equipe unida e produtiva.
+                  </p>
+                </div>
+              </div>
+<br>
+<br>
+<br>
+<br>
+            <div class="container">
+                <img src="/public/img/bruna2.png" alt="Imagem Bruna"  class="imagem-reduzida">
+                <img src="/public/img/gabi2.png" alt="Imagem Gabi" class="imagem-reduzida"><br>
+            </div>
+            <div class="container">
+              <img src="/public/img/lari2.png" alt="Imagem Larissa"  class="imagem-reduzida">
+              <img src="/public/img/Sabrina.png" alt="Imagem Sabrina" class="imagem-reduzida"><br>
+          </div>
+            <div class="team-member">
+              <div>
+                <h2>Meninas (Bruna Longuim, Gabi Sichirioli, Larissa Monteiro e Sabrina Ribeiro) - Apoio Moral</h2>
+                <p>
+                  Como grupo de Apoio Moral, as meninas foram encarregadas de dar suporte durante na criação
+                  do projeto ao decorrer dos últimos meses, gerando ideias e opiniões no trabalho.
+                </p>
+              </div>
+            </div>
+<br>
+<br>
+<br>
+<br>  
+
+            <img src="/public/img/renato.png" alt="Renato - Líder da equipe" class="imagem-reduzida">
+            <div class="team-member">
+              
+              <div>
+                <h2>Giovanni Bonazzi - Pesquisa</h2>
+                <p>
+                  Giovanni Bonazzi foi uma contratação realizada no meio do trabalho.
+                  Sua função é realizar pesquisas sobre os assuntos que serão abordados na realização do trabalho
+                  e ajudar a manter a equipe motivada e engajada. Além disso, Johl é responsável
+                </p>
+              </div>
+            </div>
+<br>
+<br>
+<br>
+<br>
+            <img src="/public/img/renato.png" alt="Renato - Líder da equipe" class="imagem-reduzida">
+            <div class="team-member">
+              <div>
+                <h2>Renato - Fotógrafo</h2>
+                <p>
+                  Renato é responsável por entender e documentar todo o processo
+                  de desenvolvimento. Ele registra as decisões, anota os avanços
+                  e acompanha o que está acontecendo no projeto, garantindo que
+                  todo o processo seja transparente e bem compreendido. Além
+                  disso, ele também atua como um ponto de referência para os
+                  membros da equipe ao lembrar de ajustes realizados ou questões
+                  que precisam ser consideradas para conquistas futuras.
+                </p>
+              </div>
+              </div>
+      
+      </class>  
+    </article>
+    
+  </header>
 </body>
 </html>
